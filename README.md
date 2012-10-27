@@ -1,21 +1,22 @@
 #Web2Auth
 
-## �T�v
+## 概要
 
-FuelPHP��SimpleAuth�N���X�������Ȃ�Ɏg���₷���悤�ɏ����������F�؃N���X�ł��B
+FuelPHPのSimpleAuthクラスを自分なりに使いやすいように書き換えた認証クラスです。
 
-## SimpleAuth����̎�ȕύX���e
+## SimpleAuthからの主な変更内容
 
-* ���[�U�̏ڍ׏����ʂ̃J�����Ɋi�[�iProfile_fields�J�������폜�j
-* Twitter�ɂ��F�ؒǉ��i�ʓrTwitter�p�b�P�[�W���K�v�j
-* ���[�U�쐬���ɕK�v�ȏ�񂩂烆�[�U�����폜���A���[���A�h���X�ƃp�X���[�h�ŔF��
-* ���[�U�̃O���[�v�����@�\�̍폜�igroup=0 �̃��[�U�Ɍ���N������i���O�C�����Ă��Ȃ��Ă��j�ύX�ł���j
+* ユーザの詳細情報を個別のカラムに格納（Profile_fieldsカラムを削除）
+* Twitterによる認証追加（別途Twitterパッケージが必要）
+* ユーザ作成時に必要な情報からユーザ名を削除し、メールアドレスとパスワードで認証
+* ユーザのグループ分け機能の削除（group=0 のユーザに限り誰からも（ログインしていなくても）変更できる）
 
-## �g����
+## 使い方
 
-�e�t�@�C���� fuel/app �ȉ��̓K�؂ȃt�H���_�Ɋi�[���Ă��������B
-Twitter�ɂ��F�؋@�\���g�p���邽�߂ɂ́A�ʓrFuelPHP��Twitter�p�b�P�[�W�ihttps://github.com/dhorrigan/fuel-twitter�j�𓱓����Ă��������B
+各ファイルを fuel/app 以下の適切なディレクトリに格納してください。
+Twitterによる認証機能を使用するためには、別途FuelPHPのTwitterパッケージ（https://github.com/dhorrigan/fuel-twitter）を導入してください。
+その他詳細は http://www.web2citizen.info/blog/2012/10/fuelphp%E3%81%AE%E8%87%AA%E4%BD%9C%E8%AA%8D%E8%A8%BC%E3%82%AF%E3%83%A9%E3%82%B9%E3%82%92%E5%85%AC%E9%96%8B%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F/ もご参照ください。
 
-## ���C�Z���X
+## ライセンス
 
 MIT License
